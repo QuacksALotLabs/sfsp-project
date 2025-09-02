@@ -41,8 +41,12 @@ Docker compose setup
 
 ## 🧳 Journey
 
+> *List of stuff I did when working on this logged here to get back later*
+
 - created virtual environemnt `python -m venv env` and activated it `.\env\Scripts\activate`
 - created requirements file with `pip freeze > requirements.txt`
+- added testing domain to hostfile `127.0.0.1 playground.home.arpa`
+- build local image with `docker build -t django-playground .` 
 
 <div align=right>
 
