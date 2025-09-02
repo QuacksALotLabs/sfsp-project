@@ -25,6 +25,7 @@ This project makes use of [`conventional commits`](https://www.conventionalcommi
 Docker container setup
 
 ```
+docker run -it -e DJANGO_ALLOWED_HOSTS=playground.home.arpa -p "3000:3000" django-playground
 ```
 
 Docker compose setup
