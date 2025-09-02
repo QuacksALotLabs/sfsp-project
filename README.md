@@ -4,9 +4,7 @@
 
 ![Banner](docs/utils/banner.jpg)
 
-[![Python](https://img.shields.io/badge/_-3.13.5-ff9863?style=flat-square&logo=python&logoColor=white&labelColor=e6805a)](#) [![Django](https://img.shields.io/badge/_-5.2.5-ff9863?style=flat-square&logo=django&logoColor=white&labelColor=e6805a)](#) [![DOCKER](https://img.shields.io/badge/containerized-white?style=flat-square&logo=docker&logoColor=white&labelColor=e6805a&color=ff9863)](#) [![CodeFactor](https://img.shields.io/codefactor/grade/github/SirQuacksAlot/py.django.playground?style=flat-square&logo=devbox&label=%C2%A0&labelColor=e6805a&color=ff9863)](https://www.codefactor.io/repository/github/sirquacksalot/py.django.playground)
-
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SirQuacksAlot/py.django.playground/build?style=flat-square&logo=github&label=build%20action&labelColor=e6805a&color=ff9863)](#)
+[![Python](https://img.shields.io/badge/_-3.13.5-ff9863?style=flat-square&logo=python&logoColor=white&labelColor=e6805a)](#) [![Django](https://img.shields.io/badge/_-5.2.5-ff9863?style=flat-square&logo=django&logoColor=white&labelColor=e6805a)](#) [![DOCKER](https://img.shields.io/badge/containerized-white?style=flat-square&logo=docker&logoColor=white&labelColor=e6805a&color=ff9863)](#) [![CodeFactor](https://img.shields.io/codefactor/grade/github/SirQuacksAlot/py.django.playground?style=flat-square&logo=devbox&label=%C2%A0&labelColor=e6805a&color=ff9863)](https://www.codefactor.io/repository/github/sirquacksalot/py.django.playground) [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SirQuacksAlot/py.django.playground/.github/workflows/build.yml?style=flat-square&logo=github&label=build&labelColor=e6805a&color=ff9863)](#)
 
 
 # py.django.playground
