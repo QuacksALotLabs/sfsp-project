@@ -7,14 +7,21 @@
 [![Python](https://img.shields.io/badge/_-3.13.5-ff9863?style=flat-square&logo=python&logoColor=white&labelColor=e6805a "python version")](#) [![Django](https://img.shields.io/badge/_-5.2.5-ff9863?style=flat-square&logo=django&logoColor=white&labelColor=e6805a "django version")](#) [![DOCKER](https://img.shields.io/badge/containerized-white?style=flat-square&logo=docker&logoColor=white&labelColor=e6805a&color=ff9863 "build with docker")](#) [![CodeFactor](https://img.shields.io/codefactor/grade/github/SirQuacksAlot/py.django.playground?style=flat-square&logo=devbox&label=%C2%A0&labelColor=e6805a&color=ff9863 "codefactor rating (clickable)")](https://www.codefactor.io/repository/github/sirquacksalot/py.django.playground) [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SirQuacksAlot/py.django.playground/.github/workflows/build.yml?style=flat-square&logo=github&label=build&labelColor=e6805a&color=ff9863 "github actions workflow status")](#)
 
 
-# py.django.playground
-*just a simple playground to get into the django framework*
+## Python Django Playground
 
-</div>
+*just a simple playground to get into the django framework*
 
 <br>
 
-This will be my take in the `python` framework `django`. Where I try out things to get in to the guts of it and have a basic under standing of the framework.
+[Getting started]() · [Journey]() · [Dokumentation]() · [Lernfortschritt]()
+
+</div>
+
+# 
+
+<br>
+
+This will be my take on the `python` framework `django`. Where I try out things to get in to the guts of it and have a basic under standing of the framework.
 
 This project makes use of [`conventional commits`](https://www.conventionalcommits.org/en/v1.0.0/) like the angular project uses them and describes them in their [`commit message guidlines`](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
