@@ -48,10 +48,9 @@ Docker compose setup
 1. install python 3.13 `winget install python.python313`
 2. clone the repo `git clone git@github.com:QuacksALotLabs/sfsp-project.git`
 3. created virtual environemnt `python -m venv .venv` and activated it `.\.venv\Scripts\activate`
-4. get on coding 👌
-5. run it with either cli command or docker
-    - `python manage.py migrate` and `python manage.py runserver 0.0.0.0:3000`
-    - `docker compose down --rmi all --remove-orphans -v` and `docker compose up -d --force-recreate`
+4. updated package manager `python.exe -m pip install --upgrade pip`
+5. install requirements `python -m pip install -r requirements.txt`
+6. get on coding 👌
 
 <div align=right>
 
