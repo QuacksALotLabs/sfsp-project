@@ -4,16 +4,16 @@
 
 ![Banner](docs/utils/banner.jpg)
 
-[![Python](https://img.shields.io/badge/_-3.13.5-ff9863?style=flat-square&logo=python&logoColor=white&labelColor=e6805a "python version")](#) [![Django](https://img.shields.io/badge/_-5.2.5-ff9863?style=flat-square&logo=django&logoColor=white&labelColor=e6805a "django version")](#) [![DOCKER](https://img.shields.io/badge/containerized-white?style=flat-square&logo=docker&logoColor=white&labelColor=e6805a&color=ff9863 "build with docker")](#) [![CodeFactor](https://img.shields.io/codefactor/grade/github/SirQuacksAlot/py.django.playground?style=flat-square&logo=devbox&label=%C2%A0&labelColor=e6805a&color=ff9863 "codefactor rating (clickable)")](https://www.codefactor.io/repository/github/sirquacksalot/py.django.playground) [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SirQuacksAlot/py.django.playground/.github/workflows/build.yml?style=flat-square&logo=github&label=build&labelColor=e6805a&color=ff9863 "github actions workflow status")](#)
+[![Python](https://img.shields.io/badge/_-3.13.5-ff9863?style=flat-square&logo=python&logoColor=white&labelColor=e6805a "python version")](#) [![Django](https://img.shields.io/badge/_-5.2.5-ff9863?style=flat-square&logo=django&logoColor=white&labelColor=e6805a "django version")](#) [![DOCKER](https://img.shields.io/badge/containerized-white?style=flat-square&logo=docker&logoColor=white&labelColor=e6805a&color=ff9863 "build with docker")](#) [![CodeFactor](https://img.shields.io/codefactor/grade/github/QuacksALotLabs/sfsp-project?style=flat-square&logo=devbox&label=%C2%A0&labelColor=e6805a&color=ff9863 "codefactor rating (clickable)")](https://www.codefactor.io/repository/github/QuacksALotLabs/sfsp-project) [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SirQuacksAlot/py.django.playground/.github/workflows/build.yml?style=flat-square&logo=github&label=build&labelColor=e6805a&color=ff9863 "github actions workflow status")](#)
 
 
-## Python Django Playground
+## Simple file sharing project
 
 *just a simple playground to get into the django framework*
 
 <br>
 
-[Getting started]() · [Journey]() · [Dokumentation]() · [Lernfortschritt]()
+[Getting started](#-getting-started) · [Get on developing](#️-get-on-developing) · [Dokumentation]()
 
 </div>
 
@@ -25,20 +25,33 @@ This will be my take on the `python` framework `django`. Where I try out things 
 
 This project makes use of [`conventional commits`](https://www.conventionalcommits.org/en/v1.0.0/) like the angular project uses them and describes them in their [`commit message guidlines`](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
+The idea is to have a simple file sharing service which saves all uploads to a s3 bucket and tag uploads to make them unique. It will use hsmw session for authentication and be available as a docker container for arm and x86 plattforms.
+
 <br>
 
 ## 🛫 Getting started
 
-Docker container setup
+Docker run setup
 
-```
-docker run -it -e DJANGO_ALLOWED_HOSTS=playground.home.arpa -p "3000:3000" django-playground
+```bash
+
 ```
 
 Docker compose setup
 
+```bash
+
 ```
-```
+
+## ⌨️ Get on developing
+
+1. install python 3.13 `winget install python.python313`
+2. clone the repo `git clone git@github.com:QuacksALotLabs/sfsp-project.git`
+3. created virtual environemnt `python -m venv .venv` and activated it `.\.venv\Scripts\activate`
+4. get on coding 👌
+5. run it with either cli command or docker
+    - `python manage.py migrate` and `python manage.py runserver 0.0.0.0:3000`
+    - `docker compose down --rmi all --remove-orphans -v` and `docker compose up -d --force-recreate`
 
 <div align=right>
 
@@ -46,20 +59,16 @@ Docker compose setup
 
 </div>
 
-## 🧳 Journey
+## 🧳 Features
 
-> *List of stuff I did when working on this logged here to get back later*
-
-- created virtual environemnt `python -m venv env` and activated it `.\env\Scripts\activate`
-- created requirements file with `pip freeze > requirements.txt`
-- added testing domain to hostfile `127.0.0.1 playground.home.arpa`
-- build local image with `docker build -t django-playground .` 
-
-<div align=right>
-
-[back to top ↑](#user-content-top)
-
-</div>
+- [ ] 🧑‍🎓 hsmw session auth
+  - [ ] 🔐 jwt sessions (optinal)
+- [ ] 💾 s3 bucket upload
+  - [ ] 🪧 upload tagging
+- [ ] 📦 containerization
+  - [ ] arm support
+  - [ ] x86 support
+  - [x] github action cicd automation
 
 <br>
 
