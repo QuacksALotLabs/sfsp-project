@@ -1,0 +1,45 @@
+---
+services:
+  api:
+    container_name: api
+    build: .
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:3000"
+    ports:
+      - 3000
+    environment:
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_HOST=service-db
+      - DB_PORT=5432
+      - S3_NAME=sfspapi
+      - S3_USER=ROOTNAME
+      - S3_PASSWORD=CHANGEME123
+      - S3_HOST=service-s3-bucket
+      - S3_PORT=9000
+    restart: unless-stopped
+
+  service-db:
+    container_name: service-db
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data 
+    restart: unless-stopped
+
+  # service-s3-bucket:
+  #   container_name: service-s3-bucket
+  #   image: minio/minio
+  #   environment:
+  #     - MINIO_ROOT_USER=ROOTNAME
+  #     - MINIO_ROOT_PASSWORD=CHANGEME123
+  #   volumes:
+  #     - "s3-data:/data"
+  #   restart: unless-stopped
+
+volumes:
+  s3-data:
+  db-data:
