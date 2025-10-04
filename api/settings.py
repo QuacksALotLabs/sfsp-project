@@ -79,6 +79,14 @@ DATABASES = {
     }
 }
 
+# Stoage
+
+STOAGES = {
+    'default': {
+        'BACKEND': 'storages.backends.s3.S3Storage',
+        'OPTION': {},
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
