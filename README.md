@@ -2,7 +2,7 @@
 
 <div align=center>
 
-![Banner](docs/utils/banner.jpg)
+![Banner](.docs/assets/banner.jpg)
 
 [![Python](https://img.shields.io/badge/_-3.13.5-ff9863?style=flat-square&logo=python&logoColor=white&labelColor=e6805a "python version")](#) [![Django](https://img.shields.io/badge/_-5.2.5-ff9863?style=flat-square&logo=django&logoColor=white&labelColor=e6805a "django version")](#) [![DOCKER](https://img.shields.io/badge/containerized-white?style=flat-square&logo=docker&logoColor=white&labelColor=e6805a&color=ff9863 "build with docker")](#) [![CodeFactor](https://img.shields.io/codefactor/grade/github/QuacksALotLabs/sfsp-project?style=flat-square&logo=devbox&label=%C2%A0&labelColor=e6805a&color=ff9863 "codefactor rating (clickable)")](https://www.codefactor.io/repository/github/QuacksALotLabs/sfsp-project) [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/SirQuacksAlot/py.django.playground/.github/workflows/build.yml?style=flat-square&logo=github&label=build&labelColor=e6805a&color=ff9863 "github actions workflow status")](#)
 
