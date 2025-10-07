@@ -6,7 +6,7 @@ This is a dev container environment for the [Dev Containers](https://marketplace
 
 1. add `container name` to hosts file pointing to `127.0.0.1`
 2. (optional) add `<django projektname>.docker.home.arpa` to hosts file pointing to `127.0.0.1`
-3. (optional) create a ssh key for git and add to the python container with:
+3. (optional) create a ssh key for git and add to the `api` container with:
     ```yml
     volumes:
       - path/to/ssh/keys/:/home/appuser/.ssh/
