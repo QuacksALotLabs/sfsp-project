@@ -16,10 +16,9 @@ services:
     container_name: &s3-bucket-db-container-name service-s3-bucket
     command: server --console-address ":9001" /data
     image: minio/minio
-    ports:
-      - 9001
     expose:
-      - 9000
+      - &s3-bucket-db-container-port 9000
+      - &s3-bucket-db-webinterface-port 9001
     environment:
       MINIO_ROOT_USER: &s3-bucket-db-root-user admin
       MINIO_ROOT_PASSWORD: &s3-bucket-db-root-password administrator
@@ -57,7 +56,7 @@ services:
       S3_USER: *s3-bucket-db-root-user
       S3_PASSWORD: *s3-bucket-db-root-password
       S3_HOST: *s3-bucket-db-container-name
-      S3_PORT: 9000
+      S3_PORT: *s3-bucket-db-container-port
 
 
     volumes:
@@ -75,4 +74,3 @@ services:
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
-    
