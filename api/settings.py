@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", default='django-insecure-rkmtq8&4urak7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get("DEBUG", default=True))
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", default="127.0.0.1").split(",")
+ALLOWED_HOSTS = [ '*' ] # os.environ.get("DJANGO_ALLOWED_HOSTS", default="127.0.0.1").split(",")
 
 # Application definition
 
@@ -93,7 +93,7 @@ S3_STORAGE_DEFINITION = {
             'access_key': os.getenv('S3_USER', default='admin'),
             'secret_key': os.getenv('S3_PASSWORD', default='administrator'),
             'bucket_name': os.getenv('S3_BUCKET_NAME', default='sfspapi'),   
-            'endpoint_url': 'http://' + os.getenv('S3_HOST', default='service-s3-bucket') + ':' + os.getenv('S3_PORT', default=9000),
+            'endpoint_url': 'http://' + os.getenv('S3_HOST', default='service-s3-bucket') + ':'+ os.getenv('S3_PORT', default=9000),
             'region_name': 'us-east-1',
             'use_ssl': False,
             'verify': True,

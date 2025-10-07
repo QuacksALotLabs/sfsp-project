@@ -30,7 +30,15 @@
 				"charliermarsh.ruff",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
-				"batisteo.vscode-django"
+				"batisteo.vscode-django",
+				"adpyke.codesnap",
+				"ms-azuretools.vscode-containers",
+				"tamasfe.even-better-toml",
+				"me-dutour-mathieu.vscode-github-actions",
+				"github.vscode-github-actions",
+				"ZainChen.json",
+				"redhat.vscode-xml",
+				"redhat.vscode-yaml"
 			]
 		}
 	}

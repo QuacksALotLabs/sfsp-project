@@ -13,6 +13,8 @@ ENV PYTHONUNBUFFERED=1
 COPY requirements-dev.txt .
 RUN python -m pip install -r requirements-dev.txt
 
+RUN apt-get update && apt install -y git iputils-ping nano
+
 WORKDIR /app
 COPY . /app
 

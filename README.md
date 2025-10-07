@@ -45,6 +45,12 @@ Docker compose setup
 
 ## ⌨️ Get on developing
 
+### dev container
+
+- take a look on dev [containers information](.devcontainer/README.md)
+
+### local development
+
 1. install python 3.13 `winget install python.python313`
 2. clone the repo `git clone git@github.com:QuacksALotLabs/sfsp-project.git`
 3. created virtual environemnt `python -m venv .venv` and activated it `.\.venv\Scripts\activate`
