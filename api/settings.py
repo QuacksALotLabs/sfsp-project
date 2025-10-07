@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'storages',
+    'invoices',
 ]
 
 MIDDLEWARE = [
@@ -83,13 +86,23 @@ DATABASES = {
     }
 }
 
-# Stoage
-
-STOAGES = {
-    'default': {
+# Storage
+S3_STORAGE_DEFINITION = {
         'BACKEND': 'storages.backends.s3.S3Storage',
-        'OPTION': {},
-    }
+        'OPTIONS': {
+            'access_key': os.getenv('S3_USER', default='admin'),
+            'secret_key': os.getenv('S3_PASSWORD', default='administrator'),
+            'bucket_name': os.getenv('S3_BUCKET_NAME', default='sfspapi'),   
+            'endpoint_url': 'http://' + os.getenv('S3_HOST', default='service-s3-bucket') + ':' + os.getenv('S3_PORT', default=9000),
+            'region_name': 'us-east-1',
+            'use_ssl': False,
+            'verify': True,
+        },
+}
+
+STORAGES = {
+    'staticfiles': S3_STORAGE_DEFINITION,
+    'default': S3_STORAGE_DEFINITION,
 }
 
 # Password validation
@@ -127,6 +140,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
