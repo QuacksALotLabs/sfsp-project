@@ -87,7 +87,37 @@ DATABASES = {
 }
 
 # Storage
-S3_STORAGE_DEFINITION = {
+S3_DEFAULT_OPTIONS = {
+}
+
+STORAGES = {
+    'staticfiles': {
+        'BACKEND': 'storages.backends.s3.S3Storage',
+        'OPTIONS': {
+            'access_key': os.getenv('S3_USER', default='admin'),
+            'secret_key': os.getenv('S3_PASSWORD', default='administrator'),
+            'bucket_name': os.getenv('S3_BUCKET_NAME', default='sfspapi'),   
+            'endpoint_url': 'http://' + os.getenv('S3_HOST', default='service-s3-bucket') + ':'+ os.getenv('S3_PORT', default=9000),
+            'region_name': 'us-east-1',
+            'location': 'static',
+            'use_ssl': False,
+            'verify': True,
+        },
+    },
+    'invoices': {
+        'BACKEND': 'storages.backends.s3.S3Storage',
+        'OPTIONS': {
+            'access_key': os.getenv('S3_USER', default='admin'),
+            'secret_key': os.getenv('S3_PASSWORD', default='administrator'),
+            'bucket_name': os.getenv('S3_BUCKET_NAME', default='sfspapi'),   
+            'endpoint_url': 'http://' + os.getenv('S3_HOST', default='service-s3-bucket') + ':'+ os.getenv('S3_PORT', default=9000),
+            'region_name': 'us-east-1',
+            'location': 'invoices',
+            'use_ssl': False,
+            'verify': True,
+        },
+    },
+    'default': {
         'BACKEND': 'storages.backends.s3.S3Storage',
         'OPTIONS': {
             'access_key': os.getenv('S3_USER', default='admin'),
@@ -98,11 +128,7 @@ S3_STORAGE_DEFINITION = {
             'use_ssl': False,
             'verify': True,
         },
-}
-
-STORAGES = {
-    'staticfiles': S3_STORAGE_DEFINITION,
-    'default': S3_STORAGE_DEFINITION,
+    },
 }
 
 # Password validation
